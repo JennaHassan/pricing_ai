@@ -7,6 +7,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    try:
+        api_key = st.secrets.get("OPENAI_API_KEY", None)
+    except:
+        pass
+
 client = OpenAI(api_key=api_key) if api_key else None
 
 csv_paths = [
