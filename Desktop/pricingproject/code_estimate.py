@@ -9,7 +9,23 @@ load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=api_key) if api_key else None
 
-materials_df = pd.read_csv('pricing_materials.csv', encoding='utf-8-sig')
+csv_paths = [
+    'pricing_materials.csv',
+    'Desktop/pricingproject/pricing_materials.csv',
+    os.path.join(os.path.dirname(__file__), 'pricing_materials.csv')
+]
+
+csv_path = None
+for path in csv_paths:
+    if os.path.exists(path):
+        csv_path = path
+        break
+
+if csv_path is None:
+    st.error("pricing_materials.csv not found")
+    st.stop()
+
+materials_df = pd.read_csv(csv_path, encoding='utf-8-sig')
 materials_df.columns = materials_df.columns.str.strip()
 
 
