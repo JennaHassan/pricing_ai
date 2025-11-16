@@ -9,7 +9,7 @@ load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=api_key) if api_key else None
 
-materials_df = pd.read_csv('/Users/jennamahdi/Desktop/pricingproject/pricing_materials.csv', encoding='utf-8-sig')
+materials_df = pd.read_csv('pricing_materials.csv', encoding='utf-8-sig')
 materials_df.columns = materials_df.columns.str.strip()
 
 
