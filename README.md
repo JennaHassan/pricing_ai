@@ -1,7 +1,7 @@
 # Nafel Pricing AI Estimator
 
 ## Description
-The Nafel Pricing AI Estimator is an AI-powered tool that automates construction project cost estimation for **Nafel Contracting**. The tool saves significant time by automating pricing calculations and becomes more accurate as it processes more project data. It is designed to streamline project budgeting and material cost tracking.
+The Nafel Pricing AI Estimator is an AI-powered tool that automates construction project cost estimation for Nafel Contracting. The tool saves significant time by automating pricing calculations and becomes more accurate as it processes more project data. It is designed to streamline project budgeting and material cost tracking.
 
 ## Features
 - Process project materials from CSV files
